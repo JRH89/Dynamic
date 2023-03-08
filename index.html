@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dynamic Content Page</title>
+	<title>My Dynamic Content Page</title>
 </head>
 <body>
-	<h1>Dynamic Content Page</h1>
+	<h1>Welcome to my page!</h1>
 	<div id="dynamic-content"></div>
+
+	<!-- Existing content on your webpage -->
+
+	<script>
+		// Get the dynamic content from the URL parameter
+		const urlParams = new URLSearchParams(window.location.search);
+		const dynamicContent = urlParams.get('content');
+		
+		// Insert the dynamic content into the placeholder element
+		const dynamicContentEl = document.getElementById('dynamic-content');
+		dynamicContentEl.innerHTML = dynamicContent;
+	</script>
 </body>
 </html>
